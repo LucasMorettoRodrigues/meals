@@ -11,9 +11,13 @@ function renderCategoryItem(itemData) {
 function CategoriesScreen() {
   return (
     <FlatList
+      key={"#"}
       data={CATEGORIES}
       keyExtractor={(item) => item.id}
       renderItem={renderCategoryItem}
+      numColumns={2}
     />
   );
 }
+
+export default CategoriesScreen;
